@@ -34,6 +34,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 5%;
 }
 
 .h1 {
@@ -51,12 +52,12 @@ body {
   text-align: left; /* Alinhar à esquerda */
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
   body {
     text-align: center; /* Alinhar o conteúdo ao centro para dispositivos móveis */
   }
 
-  h1 {
+  .h1 {
     font-size: 18px; /* Reduzir o tamanho do título para dispositivos móveis */
   }
 
@@ -67,7 +68,20 @@ body {
   #sliderValues {
     margin-top: 10px; /* Diminuir a margem superior para dispositivos móveis */
   }
+
+  #okButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 15%;
+    height: 10%;
+  }
 }
+
+
 
 .author {
   font-size: 20px;
