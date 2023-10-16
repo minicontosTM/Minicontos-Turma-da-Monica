@@ -50,6 +50,7 @@ body {
 .author {
   font-size: 20px;
   text-align: left; /* Alinhar à esquerda */
+  margin: auto;
 }
 
 @media (max-width: 768px) {
@@ -82,6 +83,7 @@ body {
 
   .author {
     font-size: 15px;
+    margin: auto;
     text-align: left; /* Alinhar à esquerda */
   }
 }
