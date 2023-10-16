@@ -11,6 +11,8 @@ body {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+
+
 #sliders {
   margin-top: 20px;
 }
@@ -42,6 +44,29 @@ body {
   font-size: 30px;
   margin: auto;
   padding: 40px;
+}
+
+.author {
+  font-size: 20px;
+  text-align: left; /* Alinhar à esquerda */
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    text-align: center; /* Alinhar o conteúdo ao centro para dispositivos móveis */
+  }
+
+  h1 {
+    font-size: 18px; /* Reduzir o tamanho do título para dispositivos móveis */
+  }
+
+  .slider {
+    width: 100%; /* Ocupar toda a largura da tela para dispositivos móveis */
+  }
+
+  #sliderValues {
+    margin-top: 10px; /* Diminuir a margem superior para dispositivos móveis */
+  }
 }
 
 .author {
