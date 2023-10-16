@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contos</title>
+  <link rel="shortcut icon" href= "Fotos/favicon.ico" >
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="pt-br">
+  <meta charset=utf-8>
+</head>
+<body>
+  <div class="p">
+    Reencontro da turma e talvez um possível amor <br>
+<br>
+Os anos se passaram, e ele já não falava errado. Os planos haviam parado, e o coelho estava guardado, pegando poeira. Mas a cor vermelha ainda é presente. E seus dentes? Ainda são enormes? E os banhos? São frequentes, ou permanecem inexistentes? E a fome? Será que é fome mesmo?<br>
+<br>
+Durante uma manhã de verão, ao arrumar o quarto, a garota de vermelho vê algo cair no chão. Era um objeto azul e empoeirado, e as lembranças se desataram. Ao voltar das férias de verão, os amigos se reencontraram, e o garoto que falava errado, ao ver a garota que antes lhe batia com um coelho e que hoje ainda usava vermelho, ao cumprimentá-la acabou dizendo: "E aí? Tlanquila?"
+  </div>
+  <div class="author">
+    Autor: L.S.B
+  </div>
+  <div id="colorInfo">
+    <p id="colorValue">Cor de Plano de Fundo:</p>
+  </div>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var colorInfo = document.getElementById("colorInfo");
+      var colorValue = document.getElementById("colorValue");
+    
+      var storedColor = localStorage.getItem("backgroundColor");
+    
+      if (storedColor) {
+        var colorValues = storedColor.split(",");
+        var red = colorValues[0];
+        var green = colorValues[1];
+        var blue = colorValues[2];
+    
+        var rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
+        colorValue.textContent = "Cor de Plano de Fundo: " + rgbColor;
+    
+        document.body.style.backgroundColor = rgbColor;
+      } else {
+        colorValue.textContent = "Nenhuma cor de plano de fundo salva.";
+      }
+    });
+
+    
+  </script>
+</body>
+</html>

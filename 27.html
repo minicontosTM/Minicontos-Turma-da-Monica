@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contos</title>
+  <link rel="shortcut icon" href= "Fotos/favicon.ico" >
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="pt-br">
+  <meta charset=utf-8>
+</head>
+<body>
+  <div class="p">
+    Hercules<br>
+<br>
+Depois que fui amaldiçoado,somente um abraço dentuço poderia me salvar.<br>
+Me mandaram para terra na esperança de achar alguém. Um homem passava ali perto de onde cai, me pegou e levou para sua pequena filha, uma menina dentucinha de um grande coração. Quando ela me abraçou ganhou super força, e hoje ela usa ela para dar coelhadas nos meninos da sua rua.
+  </div>
+  <div class="author">
+    Autor: L&F
+  </div>
+  <div id="colorInfo">
+    <p id="colorValue">Cor de Plano de Fundo:</p>
+  </div>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var colorInfo = document.getElementById("colorInfo");
+      var colorValue = document.getElementById("colorValue");
+    
+      var storedColor = localStorage.getItem("backgroundColor");
+    
+      if (storedColor) {
+        var colorValues = storedColor.split(",");
+        var red = colorValues[0];
+        var green = colorValues[1];
+        var blue = colorValues[2];
+    
+        var rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
+        colorValue.textContent = "Cor de Plano de Fundo: " + rgbColor;
+    
+        document.body.style.backgroundColor = rgbColor;
+      } else {
+        colorValue.textContent = "Nenhuma cor de plano de fundo salva.";
+      }
+    });
+
+    
+  </script>
+</body>
+</html>

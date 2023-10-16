@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contos</title>
+  <link rel="shortcut icon" href= "Fotos/favicon.ico" >
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="pt-br">
+  <meta charset=utf-8>
+</head>
+<body>
+  <div class="p">
+Ser o dono da "lua" era seu objetivo, mas a consequência foi também desejada, amizades verdadeiras, muitas aventuras e o primeiro amor. Laços vermelhos estão hoje ligados não só na vida dos quatro personagens, mas na infância de vários brasileiros.
+  </div>
+  <div class="author">
+    Autor: Sarah
+  </div>
+  <div id="colorInfo">
+    <p id="colorValue">Cor de Plano de Fundo:</p>
+  </div>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var colorInfo = document.getElementById("colorInfo");
+      var colorValue = document.getElementById("colorValue");
+    
+      var storedColor = localStorage.getItem("backgroundColor");
+    
+      if (storedColor) {
+        var colorValues = storedColor.split(",");
+        var red = colorValues[0];
+        var green = colorValues[1];
+        var blue = colorValues[2];
+    
+        var rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
+        colorValue.textContent = "Cor de Plano de Fundo: " + rgbColor;
+    
+        document.body.style.backgroundColor = rgbColor;
+      } else {
+        colorValue.textContent = "Nenhuma cor de plano de fundo salva.";
+      }
+    });
+
+    
+  </script>
+</body>
+</html>

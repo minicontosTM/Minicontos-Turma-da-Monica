@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contos</title>
+  <link rel="shortcut icon" href= "Fotos/favicon.ico" >
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="pt-br">
+  <meta charset=utf-8>
+</head>
+<body>
+  <div class="p">
+    O VOO DA AMIZADE <br>
+    <br>
+    Chico Bento, menino do campo, brincava com a natureza como poucos. Um dia, achou um ovo misterioso. Cuidou dele até chocar um filhote raro. Amizade eterna nasceu ali. O tempo passou, e a amizade entre Chico Bento e o pequeno pássaro cresceu. Juntos, enfrentaram desafios e descobriram segredos da floresta. Aos olhos de todos, eram como irmãos. Uma conexão pura e verdadeira que encantava a todos que presenciavam essa linda história de amizade.
+  </div>
+  <div class="author">
+    Autor: JOCR
+  </div>
+  <div id="colorInfo">
+    <p id="colorValue">Cor de Plano de Fundo:</p>
+  </div>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var colorInfo = document.getElementById("colorInfo");
+      var colorValue = document.getElementById("colorValue");
+    
+      var storedColor = localStorage.getItem("backgroundColor");
+    
+      if (storedColor) {
+        var colorValues = storedColor.split(",");
+        var red = colorValues[0];
+        var green = colorValues[1];
+        var blue = colorValues[2];
+    
+        var rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
+        colorValue.textContent = "Cor de Plano de Fundo: " + rgbColor;
+    
+        document.body.style.backgroundColor = rgbColor;
+      } else {
+        colorValue.textContent = "Nenhuma cor de plano de fundo salva.";
+      }
+    });
+
+    
+  </script>
+</body>
+</html>

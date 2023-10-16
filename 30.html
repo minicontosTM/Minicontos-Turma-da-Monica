@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contos</title>
+  <link rel="shortcut icon" href= "Fotos/favicon.ico" >
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="pt-br">
+  <meta charset=utf-8>
+</head>
+<body>
+  <div class="p">
+    Infância<br>
+<br>
+Exatamente as 08:45, lembro até hoje.<br>
+Acordava cedo, tomava café e com a maior empolgação ligava a TV.<br>
+Hoje, me pego pensando sobre o meu passado, como era bom!<br>
+Porém o que me resta agora é viver uma mesma rotina.<br>
+Acordar cedo, trabalhar e dormir.
+  </div>
+  <div class="author">
+    Autor: JVG
+  </div>
+  <div id="colorInfo">
+    <p id="colorValue">Cor de Plano de Fundo:</p>
+  </div>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var colorInfo = document.getElementById("colorInfo");
+      var colorValue = document.getElementById("colorValue");
+    
+      var storedColor = localStorage.getItem("backgroundColor");
+    
+      if (storedColor) {
+        var colorValues = storedColor.split(",");
+        var red = colorValues[0];
+        var green = colorValues[1];
+        var blue = colorValues[2];
+    
+        var rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
+        colorValue.textContent = "Cor de Plano de Fundo: " + rgbColor;
+    
+        document.body.style.backgroundColor = rgbColor;
+      } else {
+        colorValue.textContent = "Nenhuma cor de plano de fundo salva.";
+      }
+    });
+
+    
+  </script>
+</body>
+</html>

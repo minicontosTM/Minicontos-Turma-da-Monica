@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contos</title>
+  <link rel="shortcut icon" href= "Fotos/favicon.ico" >
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="pt-br">
+  <meta charset=utf-8>
+</head>
+<body>
+  <div class="p">
+    Brownie da Magali<br>
+    <br>
+    Magali acordou, vestiu seu vestido amarelo, de café da manhã comeu: uma melancia, trinta mini bisnagas, três xícaras de leite com achocolatado e 4 pães com presunto, queijo e requeijão. Depois de uma refeição bem feita, foi para a escola e encontrou Mônica, Cebolinha e Cascão, que já tinham chegado. Na hora do recreio, viu o brownie recheado com brigadeiro branco de Carminha Fru-Fru, que estava em uma vasilha ao seu lado e teve a ideia de conversar com Cebolinha para criar um plano infalível para conseguir pegar o precioso bolinho. Cebolinha teve a ideia de pegar os laços que cada um tinha como amuleto no dia que acharam o Floquinho, amarraram um no outro, fazendo uma corda. Mônica distraiu Carminha enquanto Magali amarrava a corda na vasilha e de uma hora para outra, Carminha viu que seu brownie estava na boca de Magali que estava feliz com seu doce.
+  </div>
+  <div class="author">
+    Autor: ACFF
+  </div>
+  <div id="colorInfo">
+    <p id="colorValue">Cor de Plano de Fundo:</p>
+  </div>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var colorInfo = document.getElementById("colorInfo");
+      var colorValue = document.getElementById("colorValue");
+    
+      var storedColor = localStorage.getItem("backgroundColor");
+    
+      if (storedColor) {
+        var colorValues = storedColor.split(",");
+        var red = colorValues[0];
+        var green = colorValues[1];
+        var blue = colorValues[2];
+    
+        var rgbColor = "rgb(" + red + "," + green + "," + blue + ")";
+        colorValue.textContent = "Cor de Plano de Fundo: " + rgbColor;
+    
+        document.body.style.backgroundColor = rgbColor;
+      } else {
+        colorValue.textContent = "Nenhuma cor de plano de fundo salva.";
+      }
+    });
+
+    
+  </script>
+</body>
+</html>

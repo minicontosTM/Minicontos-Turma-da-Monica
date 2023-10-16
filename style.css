@@ -1,0 +1,50 @@
+body {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#sliders {
+  margin-top: 20px;
+}
+
+.slider {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+#sliderValues {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#okButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.h1 {
+  font-size: 36px;
+}
+
+.p {
+  font-size: 30px;
+  margin: auto;
+  padding: 40px;
+}
+
+.author {
+  font-size: 20px;
+  text-align: left; /* Alinhar à esquerda */
+}
