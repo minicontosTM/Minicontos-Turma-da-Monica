@@ -72,13 +72,13 @@ body {
 
   #okButton {
     padding: 10px 20px;
-    background-color: #00b815;
+    background-color: #007bff;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     width: 30%;
-    height: 10%;
+    height: 5%;
   }
 
   .author {
