@@ -79,11 +79,12 @@ body {
     width: 15%;
     height: 10%;
   }
+
+  .author {
+    font-size: 15px;
+    text-align: left; /* Alinhar à esquerda */
+  }
 }
 
 
 
-.author {
-  font-size: 20px;
-  text-align: left; /* Alinhar à esquerda */
-}
