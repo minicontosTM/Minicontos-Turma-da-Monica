@@ -34,8 +34,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  width: 5vw;
-  height: 2.5vw;
+  width: 5%;
 }
 
 .h1 {
@@ -54,3 +53,37 @@ body {
   margin: auto;
 }
 
+@media (max-width: 768px) {
+  body {
+    text-align: center; /* Alinhar o conteúdo ao centro para dispositivos móveis */
+  }
+
+  .h1 {
+    font-size: 18px; /* Reduzir o tamanho do título para dispositivos móveis */
+  }
+
+  .slider {
+    width: 100%; /* Ocupar toda a largura da tela para dispositivos móveis */
+  }
+
+  #sliderValues {
+    margin-top: 10px; /* Diminuir a margem superior para dispositivos móveis */
+  }
+
+  #okButton {
+    padding: 10px 20px;
+    background-color: #00b815;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    height: 10%;
+  }
+
+  .author {
+    font-size: 15px;
+    margin: auto;
+    text-align: left; /* Alinhar à esquerda */
+  }
+}
